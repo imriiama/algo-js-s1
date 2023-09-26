@@ -1,13 +1,19 @@
-var a = 3; // mettre let au mlieu de var
-while(a < 9){
-    a++; //; pas nécessaire 
-    console.log(a) 
-    if (a == 8){
-        break; //; pas nécessaire 
-    } else if (a == 7) {
-        continue; //; pas nécessaire 
-    }
-    // console.log(a) au mauvais endroit
+var a = 4, b = 4, c = 3
+
+if( a === b){
+    console.log("c'est égal")
+} else if ( c <= b && a+c != 3){
+    console.log("ok")
+} else {
+    console.log("raté")
 }
 
-// correction : 
+//correction
+
+//trois variables affecter à une valeur séparéments
+// var a = 4
+// var b = 4
+// var c = 3
+
+// juste < et pas <=
+
