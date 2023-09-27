@@ -10,4 +10,4 @@ while(a < 9){
     // console.log(a) au mauvais endroit
 }
 
-// correction : 
+// correction 
