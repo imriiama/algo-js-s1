@@ -4,6 +4,4 @@ let ProfilPerso = {
     Age : 15,
 }
 
-let sentence = ProfilPerso.FirstName + " " + ProfilPerso.LastName + " a " + ProfilPerso.Age + " ans" + " et est à l'école."
-
-console.log(sentence)
+console.log(ProfilPerso.FirstName + " " + ProfilPerso.LastName + " a " + ProfilPerso.Age + " ans" + " et est à l'école.")
