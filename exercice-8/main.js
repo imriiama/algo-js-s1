@@ -1,64 +1,11 @@
+//j'ai essayé d'intégrer la fonction luck, mais elle ne fonctionne pas
+
 class pokemeon {
-    constructor(name, attack, defense, hp, luck){
-        this.name = poke1, poke2
-        
-
-        attackPokemon(poke1, poke2) {
-            poke1.hp -= poke2
-        }
-    }
-    name;
-    attack;
-    defense;
-    hp;
-    luck;
-
-    luck = Math.random(0-1) 
-    function isLucky (Pokemon_luck, luck) {
-    return (Pokemon_luck < luck);
-    }
-}
-
-/*let Poke1 = new Pokemeon("Poke1", 20, 10, 5, 0.6);
-let Poke2 = new Pokemeon("Poke2", 15, 5, 2, 0.4);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-while (Poke1_hp > 0 || Poke2_hp > 0){
-    let degat1 = Poke1_attack - Poke2_defense
-    Poke2_hp -= degat1
-    console.log("hp : " + Poke2_hp, "degats : " + degat1)
-    if (Poke2_hp <= 0){
-        break
-        console.log("Poke2 est mort.")
-    }
-    let degat2 = Poke2_attack - Poke1_defense
-    Poke1_hp -= degat2
-    console.log("hp : " + Poke1_hp, "degats : " + degat2)
-    if (Poke1_hp <= 0){
-        break
-        console.log("Poke1 est mort.")
+    constructor(name, attack, defense, hp, /*luck*/){
+        this.name = name
+        this.attack = attack
+        this.defense = defense
+        this.hp = hp
     }
 }
 
@@ -66,3 +13,33 @@ while (Poke1_hp > 0 || Poke2_hp > 0){
 function isLucky (Pokemon_luck, luck) {
     return (Pokemon_luck < luck);
 }*/
+
+let poke1 = new pokemeon("Poke1", 75, 25, 100);
+console.log(poke1)
+
+let poke2 = new pokemeon("Poke2", 50, 35, 90);
+console.log(poke2)
+
+while (poke1.hp > 0 || poke2.hp > 0){
+    let degat1 = poke1.attack - poke2.defense
+    poke2.hp -= degat1
+
+    if (poke2.hp <= 0){
+        console.log("Victoire : " + poke1.name)
+        console.log("Defaite : " + poke2.name)
+        break
+    }else{
+        console.log(poke2.name + " : \n Hp : " + poke2.hp)
+    }
+
+    let degat2 = poke2.attack - poke1.defense
+    poke1.hp -= degat2
+
+    if (poke1.hp <= 0){
+        console.log("Victoire : " + poke2.name)
+        console.log("Defaite : " + poke1.name)
+        break
+    }else{
+        console.log(poke1.name + " : \n Hp : " + poke1.hp)
+    }
+}
